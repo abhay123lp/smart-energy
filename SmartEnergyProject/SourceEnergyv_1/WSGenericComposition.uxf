@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Interface</type>
+    <coordinates>
+      <x>30</x>
+      <y>10</y>
+      <w>400</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>Device Config
+Package::DeviceConfigClass
+--
+GetDeviceID(Long &lt;DeviceID&gt;)
+GetCateogryID(Long &lt;DeviceID&gt;, Enum TYPE)
+GetDeviceTemp
+SetRegionType&lt;List {RegionListings}&gt;
+GetDeviceEnergyConsumption
+SetDeviceEnergyConsumption
+GetDeviceThresholdValue
+SetDeviceThresholdValue
+GetDeviceName
+SetDeviceName
+GetDeviceManufacturer(Long &lt;DeviceID&gt;)
+SetDeviceManufacturer(Long &lt;DeviceID&gt;,Long &lt;DeviceMan&gt;)
+GetDeviceConfig(List&lt;DeviceProperties&gt;)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>140</x>
+      <y>620</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>_object: Class_
+--
+id: Long="36548"
+[waiting for message]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>20</x>
+      <y>330</y>
+      <w>330</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>
+template=1: Object
+TemplateClass&lt;&lt;AbstractAppDevice&gt;&gt;
+Package::DeviceConfigClass
+{Some Properties}
+--
+-id: Long
+-name: String
+-Identifier : Long
+-RegionID : Long
+-ClassAttribute: Long_
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+Responsibilities
+-- ConfigConstruct()
+-- ConfigRedesign()
+-- ConfigDelete(ConfigID)</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
