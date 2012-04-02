@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Tabs</title>
+	
+	<link rel="stylesheet" href="resources/css/sencha-touch.css" type="text/css">
+
+	<script type="text/javascript" src="resources/sencha-touch-all.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+
+	<style>
+	    .card1,
+	    .card2,
+	    .card3 {
+	        background-color: #376daa;
+	        text-align: center;
+	        color: #204167;
+	        text-shadow: #3F80CA 0 1px 0;
+	        font-size: 72px;
+            padding-top: 100px;
+	    }
+	</style>
+	<script type="text/javascript" charset="utf-8" src="phonegap-1.1.0.js"></script>
+	<script type="text/javascript">
+			function show_pic() {
+				navigator.notification.beep(2);
+				var networkState = navigator.network.connection.type;
+
+			    var states = {};
+			    states[Connection.UNKNOWN]  = 'Unknown connection';
+			    states[Connection.ETHERNET] = 'Ethernet connection';
+			    states[Connection.WIFI]     = 'WiFi connection';
+			    states[Connection.CELL_2G]  = 'Cell 2G connection';
+			    states[Connection.CELL_3G]  = 'Cell 3G connection';
+			    states[Connection.CELL_4G]  = 'Cell 4G connection';
+			    states[Connection.NONE]     = 'No network connection';
+
+			    confirm('Connection type:\n ' + states[networkState]);
+		    navigator.camera.getPicture(dump_pic, fail, {
+		        quality : 50
+		    });
+		}
+	</script>
+</head>
+<body><a href="#" class="btn large" onclick="show_pic();">Get a Picture</a></body>
+</html>
