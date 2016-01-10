@@ -1,0 +1,1 @@
+Optimizing utilization of energy in an area.
